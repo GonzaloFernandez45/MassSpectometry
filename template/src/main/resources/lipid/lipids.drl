@@ -2,6 +2,10 @@
 package lipid;
 
 unit LipidScoreUnit;
+import lipid.Lipid;
+import lipid.Annotation;
+import adduct.Adduct;
+import adduct.AdductList;
 
 // TODO Include here rules and queries to fulfill the practice requirements
 
@@ -22,6 +26,5 @@ then
     // !! TODO ONLY FOR DEBUGGING
     System.out.println("Scored 1 for annotations: " + $a1 + " and " + $a2);
 end
-
 
 // !! TODO NEXT RULE: Negative evidence. If the RT follows the opposite order than the previous one, then the addScore should be -1.

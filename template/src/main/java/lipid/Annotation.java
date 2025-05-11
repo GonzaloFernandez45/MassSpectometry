@@ -2,9 +2,7 @@ package lipid;
 
 import adduct.Adduct;
 import adduct.AdductList;
-import org.drools.base.rule.QueryArgument;
-
-import java.sql.SQLOutput;
+import lipid.Lipid;
 import java.util.*;
 
 /**
@@ -16,7 +14,7 @@ public class Annotation {
     private final double mz;
     private final double intensity; // intensity of the most abundant peak in the groupedPeaks
     private final double rtMin;
-    private final IoniationMode ionizationMode;
+    private final IonizationMode ionizationMode;
     private String adduct; // !!TODO The adduct will be detected based on the groupedSignals
     private final Set<Peak> groupedSignals;
     private int score;
@@ -30,7 +28,7 @@ public class Annotation {
      * @param retentionTime
      * @param ionizationMode
      */
-    public Annotation(Lipid lipid, double mz, double intensity, double retentionTime, IoniationMode ionizationMode) {
+    public Annotation(Lipid lipid, double mz, double intensity, double retentionTime, IonizationMode ionizationMode) {
         this(lipid, mz, intensity, retentionTime, ionizationMode, Collections.emptySet());
     }
 
@@ -42,7 +40,7 @@ public class Annotation {
      * @param ionizationMode
      * @param groupedSignals
      */
-    public Annotation(Lipid lipid, double mz, double intensity, double retentionTime, IoniationMode ionizationMode, Set<Peak> groupedSignals) {
+    public Annotation(Lipid lipid, double mz, double intensity, double retentionTime, IonizationMode ionizationMode, Set<Peak> groupedSignals) {
         this.lipid = lipid;
         this.mz = mz;
         this.rtMin = retentionTime;
@@ -81,7 +79,7 @@ public class Annotation {
         return intensity;
     }
 
-    public IoniationMode getIonizationMode() {
+    public IonizationMode getIonizationMode() {
         return ionizationMode;
     }
 
@@ -136,10 +134,10 @@ public class Annotation {
 
 
     // !!TODO Detect the adduct with an algorithm or with drools, up to the user.
-    public String detectAdductFromSignals(IoniationMode ionizationMode) {
+    public String detectAdductFromSignals(IonizationMode ionizationMode) {
         double tolerance = 2000; // ppm tolerance for adduct detection
 
-        if (ionizationMode == IoniationMode.POSITIVE) {
+        if (ionizationMode == IonizationMode.POSITIVE) {
             for (Peak peak : groupedSignals) {
                 System.out.println("peak: " + peak.getMz());
                 for (Map.Entry<String, Double> entry : AdductList.MAPMZPOSITIVEADDUCTS.entrySet()) {
@@ -151,7 +149,7 @@ public class Annotation {
                     System.out.println("Monoisotopic Mass Annotation: " + monoisotopicMassAnnotation);
 
                     double monoisotopicMassPeak = Adduct.getMonoisotopicMassFromMZ(peak.getMz(), entry.getKey());
-                     System.out.println("Monoisotopic Mass Peak: " + monoisotopicMassPeak);
+                    System.out.println("Monoisotopic Mass Peak: " + monoisotopicMassPeak);
                     int ppmIncrement = Adduct.calculatePPMIncrement(monoisotopicMassPeak, monoisotopicMassAnnotation);
                     System.out.println("PPM Increment: " + ppmIncrement);
                     if (ppmIncrement <= tolerance) {
@@ -159,7 +157,7 @@ public class Annotation {
                     }
                 }
             }
-        } else if (ionizationMode == IoniationMode.NEGATIVE) {
+        } else if (ionizationMode == IonizationMode.NEGATIVE) {
             for (Peak peak : groupedSignals) {
                 double monoisotopicMassPeak = Adduct.getMonoisotopicMassFromMZ(peak.getMz(), "");
                 for (Map.Entry<String, Double> entry : AdductList.MAPMZNEGATIVEADDUCTS.entrySet()) {
@@ -174,8 +172,6 @@ public class Annotation {
         return "Unkown";
     }
 
-
-
     public static void main(String[] args) {
 
         // Given two peaks with ~21.98 Da difference (e.g., [M+H]+ and [M+Na]+)
@@ -189,31 +185,28 @@ public class Annotation {
         double annotationMZdc = 350.75444d;
         double annotationIntensity = 80000.0;
         double annotationRT = 6.5d;
-        Annotation annotation = new Annotation(lipid, annotationMZ, annotationIntensity, annotationRT, IoniationMode.POSITIVE, Set.of(mH, mNa, doublyCharged));
-        Annotation annotation2 = new Annotation(lipid, annotationMZNa, annotationIntensity, annotationRT, IoniationMode.POSITIVE, Set.of(mH, mNa , doublyCharged));
-        Annotation annotation3 = new Annotation(lipid, annotationMZdc, annotationIntensity, annotationRT, IoniationMode.POSITIVE, Set.of(mH, mNa, doublyCharged));
+        Annotation annotation = new Annotation(lipid, annotationMZ, annotationIntensity, annotationRT, IonizationMode.POSITIVE, Set.of(mH, mNa, doublyCharged));
+        Annotation annotation2 = new Annotation(lipid, annotationMZNa, annotationIntensity, annotationRT, IonizationMode.POSITIVE, Set.of(mH, mNa , doublyCharged));
+        Annotation annotation3 = new Annotation(lipid, annotationMZdc, annotationIntensity, annotationRT, IonizationMode.POSITIVE, Set.of(mH, mNa, doublyCharged));
 
 
 
         // Then we should call the algorithmic/knowledge system rules fired to detect the adduct and Set it!
         //
-        String adduct = annotation.detectAdductFromSignals(annotation.getIonizationMode());
-        System.out.println("Adduct detected: " + adduct);
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE);
         annotation.setAdduct(adduct);
         System.out.println("Annotation: " + annotation);
-        String adduct2 = annotation2.detectAdductFromSignals(annotation2.getIonizationMode());
-        System.out.println("Adduct detected: " + adduct2);
+
+        String adduct2 =annotation2.detectAdductFromSignals(IonizationMode.POSITIVE);
         annotation2.setAdduct(adduct2);
         System.out.println("Annotation: " + annotation2);
-        String adduct3 = annotation3.detectAdductFromSignals(annotation3.getIonizationMode());
-        System.out.println("Adduct detected: " + adduct3);
+
+        String adduct3 =annotation3.detectAdductFromSignals(IonizationMode.POSITIVE);
         annotation3.setAdduct(adduct3);
         System.out.println("Annotation: " + annotation3);
 
 
     }
-
-
 
 
 
