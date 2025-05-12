@@ -34,7 +34,9 @@ public class AdductDetectionTest {
 
         // Then we should call the algorithmic/knowledge system rules fired to detect the adduct and Set it!
         //
-        String adduct = annotation.detectAdduct();
+         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+//        String adduct = annotation.detectAdductFromGroupedSignals();
+
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+H]+ should be detected", annotation.getAdduct());
@@ -50,7 +52,9 @@ public class AdductDetectionTest {
         Lipid lipid = new Lipid(1, "PE 36:2", "C41H78NO8P", "PE", 36, 2);
         Annotation annotation = new Annotation(lipid, mh.getMz(), mh.getIntensity(), 7.5d, IonizationMode.POSITIVE, Set.of(mh, mhH2O));
 
-        String adduct = annotation.detectAdduct();
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+//        String adduct = annotation.detectAdductFromGroupedSignals();
+
         annotation.setAdduct(adduct);
 
 
@@ -69,12 +73,73 @@ public class AdductDetectionTest {
         Lipid lipid = new Lipid(3, "TG 54:3", "C57H104O6", "TG", 54, 3);
         Annotation annotation = new Annotation(lipid, singlyCharged.getMz(), singlyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
 
-        String adduct = annotation.detectAdduct();
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE,1.6d);
+//        String adduct = annotation.detectAdductFromGroupedSignals();
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+H]+ should be detected", annotation.getAdduct());
 
         assertEquals( "Adduct inferred from lowest mz in group","[M+H]+", annotation.getAdduct());
+    }
+
+    @Test
+    public void shouldDetectAdductBasedOnMzk() {
+
+        // Given two peaks with ~21.98 Da difference (e.g., [M+H]+ and [M+Na]+)
+        Peak mH = new Peak(700.500, 100000.0); // [M+H]+
+        Peak mk = new Peak(738.4564, 80000.0);  // [M+k]+
+        Lipid lipid = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
+
+        double annotationRT = 6.5d;
+        Annotation annotation = new Annotation(lipid, mk.getMz(), mk.getIntensity(), annotationRT, IonizationMode.POSITIVE, Set.of(mH, mk));
+
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+//        String adduct = annotation.detectAdductFromGroupedSignals();
+
+        annotation.setAdduct(adduct);
+
+        assertNotNull("[M+K]+ should be detected", annotation.getAdduct());
+        assertEquals( "Adduct inferred from lowest mz in group","[M+K]+", annotation.getAdduct());
+        System.out.println(annotation.getAdduct());
+
+    }
+
+    @Test
+    public void shouldDetectLossOfWaterAdduct1() {
+        Peak mh = new Peak(700.500, 90000.0);        // [M+H]+
+        Peak mhH2O = new Peak(682.4894, 70000.0);     // [M+H–H₂O]+, ~18.0106 Da less
+
+        Lipid lipid = new Lipid(1, "PE 36:2", "C41H78NO8P", "PE", 36, 2);
+        Annotation annotation = new Annotation(lipid, mhH2O.getMz(), mhH2O.getIntensity(), 7.5d, IonizationMode.POSITIVE, Set.of(mh, mhH2O));
+
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+//        String adduct = annotation.detectAdductFromGroupedSignals();
+
+        annotation.setAdduct(adduct);
+
+        assertNotNull("[M+H-H2O]+ should be detected", annotation.getAdduct());
+
+        assertEquals( "Adduct inferred from lowest mz in group","[M+H-H2O]+", annotation.getAdduct());
+    }
+
+    @Test
+    public void shouldDetectDoublyChargedAdduct2() {
+        // Assume real M = (700.500 - 1.0073) = 699.4927
+        // So [M+2H]2+ = (M + 2.0146) / 2 = 350.7536
+        Peak singlyCharged = new Peak(701.500, 100000.0);  // [M+H]+
+        Peak doublyCharged = new Peak(350.754, 85000.0);   // [M+2H]2+
+
+        Lipid lipid = new Lipid(3, "TG 54:3", "C57H104O6", "TG", 54, 3);
+        Annotation annotation = new Annotation(lipid, doublyCharged.getMz(), doublyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
+
+
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE,10d);
+//        String adduct = annotation.detectAdductFromGroupedSignals();
+        annotation.setAdduct(adduct);
+
+        assertNotNull("[M+2H]2+ should be detected", annotation.getAdduct());
+
+        assertEquals( "Adduct inferred from lowest mz in group","[M+2H]2+", annotation.getAdduct());
     }
 
 }
