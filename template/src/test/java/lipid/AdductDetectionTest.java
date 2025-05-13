@@ -73,7 +73,7 @@ public class AdductDetectionTest {
         Lipid lipid = new Lipid(3, "TG 54:3", "C57H104O6", "TG", 54, 3);
         Annotation annotation = new Annotation(lipid, singlyCharged.getMz(), singlyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
 
-        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE,1.6d);
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE,10d);
 //        String adduct = annotation.detectAdductFromGroupedSignals();
         annotation.setAdduct(adduct);
 

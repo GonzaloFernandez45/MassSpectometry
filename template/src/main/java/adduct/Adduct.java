@@ -38,7 +38,7 @@ public class Adduct {
             mzoffset = AdductList.MAPMZNEGATIVEADDUCTS.get(adduct);
         }
         if(mzoffset == null) {
-            mzoffset = 0.0;
+            throw new IllegalArgumentException("No Adduct Found for " + adduct);
         }
 
         int multimer = extractMultimer(adduct); // regex "(\\d+)M"
