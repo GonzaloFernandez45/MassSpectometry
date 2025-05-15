@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.AdductDetectionTest" time="0.172" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.AdductDetectionTest" time="0.149" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Users\gzomo\.jdks\openjdk-23.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire6586234664058042815\surefirebooter-20250515133045040_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire6586234664058042815 2025-05-15T13-30-44_839-jvmRun1 surefire-20250515133045040_1tmp surefire_0-20250515133045040_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751 2025-05-15T15-12-55_373-jvmRun1 surefire-20250515151255549_1tmp surefire_0-20250515151255549_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\test-classes;C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\classes;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-engine\10.0.0\drools-ruleunits-engine-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-dsl\10.0.0\drools-ruleunits-dsl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-canonical-model\10.0.0\drools-canonical-model-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-compiler\10.0.0\drools-model-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-maven-support\10.0.0\kie-util-maven-support-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-core\10.0.0\drools-core-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-xml\10.0.0\kie-util-xml-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-base\10.0.0\drools-base-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-static\10.0.0\drools-wiring-static-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-io\10.0.0\drools-io-10.0.0.jar;C:\Users\gzomo\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-compiler\10.0.0\drools-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-parser\10.0.0\drools-drl-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-extensions\10.0.0\drools-drl-extensions-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-ast\10.0.0\drools-drl-ast-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-kiesession\10.0.0\drools-kiesession-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ecj\10.0.0\drools-ecj-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\eclipse\jdt\ecj\3.33.0\ecj-3.33.0.jar;C:\Users\gzomo\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-impl\10.0.0\drools-ruleunits-impl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-api\10.0.0\drools-ruleunits-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-codegen\10.0.0\drools-model-codegen-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-codegen-common\10.0.0\drools-codegen-common-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-prototype\10.0.0\drools-model-prototype-10.0.0.jar;C:\Users\gzomo\.m2\repository\com\github\javaparser\javaparser-core\3.25.8\javaparser-core-3.25.8.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-parser\10.0.0\drools-mvel-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-compiler\10.0.0\drools-mvel-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\gzomo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\gzomo\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-classic\1.5.17\logback-classic-1.5.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-core\1.5.17\logback-core-1.5.17.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-dynamic\10.0.0\drools-wiring-dynamic-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-api\10.0.0\drools-wiring-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-memory-compiler\10.0.0\kie-memory-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-util\10.0.0\drools-util-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-api\10.0.0\kie-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-internal\10.0.0\kie-internal-10.0.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire6586234664058042815\surefirebooter-20250515133045040_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.2+7-58"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="shouldDetectAdductBasedOnMzk" classname="lipid.AdductDetectionTest" time="0.063">
+  <testcase name="shouldDetectAdductBasedOnMzk" classname="lipid.AdductDetectionTest" time="0.047">
     <system-out><![CDATA[
 --- Probando aducto para la anotación: [M+H]+ ---
 Masa monoisotópica estimada de la anotación con [M+H]+: 737.449124
@@ -132,7 +132,7 @@ secondAdduct=[M+2H]2+, expectedMz=352.26091399999996, observed=350.754, diff=1.5
 DETECTED adduct: [M+H]+ (via [M+2H]2+)
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectAdductBasedOnMzDifference" classname="lipid.AdductDetectionTest" time="0.0">
+  <testcase name="shouldDetectAdductBasedOnMzDifference" classname="lipid.AdductDetectionTest" time="0.024">
     <system-out><![CDATA[
 --- Probando aducto para la anotación: [M+H]+ ---
 Masa monoisotópica estimada de la anotación con [M+H]+: 699.492714
@@ -162,7 +162,7 @@ secondAdduct=[M+H-H2O]+, expectedMz=682.489524, observed=682.4894, diff=1.239999
 DETECTED adduct: [M+H]+ (via [M+H-H2O]+)
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectLossOfWaterAdduct1" classname="lipid.AdductDetectionTest" time="0.015">
+  <testcase name="shouldDetectLossOfWaterAdduct1" classname="lipid.AdductDetectionTest" time="0.0">
     <system-out><![CDATA[
 --- Probando aducto para la anotación: [M+H]+ ---
 Masa monoisotópica estimada de la anotación con [M+H]+: 681.482124

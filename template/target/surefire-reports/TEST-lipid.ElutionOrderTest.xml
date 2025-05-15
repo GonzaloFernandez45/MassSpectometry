@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.ElutionOrderTest" time="1.328" tests="6" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.ElutionOrderTest" time="1.278" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Users\gzomo\.jdks\openjdk-23.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire6586234664058042815\surefirebooter-20250515133045040_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire6586234664058042815 2025-05-15T13-30-44_839-jvmRun1 surefire-20250515133045040_1tmp surefire_0-20250515133045040_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751 2025-05-15T15-12-55_373-jvmRun1 surefire-20250515151255549_1tmp surefire_0-20250515151255549_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\test-classes;C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\classes;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-engine\10.0.0\drools-ruleunits-engine-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-dsl\10.0.0\drools-ruleunits-dsl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-canonical-model\10.0.0\drools-canonical-model-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-compiler\10.0.0\drools-model-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-maven-support\10.0.0\kie-util-maven-support-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-core\10.0.0\drools-core-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-xml\10.0.0\kie-util-xml-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-base\10.0.0\drools-base-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-static\10.0.0\drools-wiring-static-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-io\10.0.0\drools-io-10.0.0.jar;C:\Users\gzomo\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-compiler\10.0.0\drools-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-parser\10.0.0\drools-drl-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-extensions\10.0.0\drools-drl-extensions-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-ast\10.0.0\drools-drl-ast-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-kiesession\10.0.0\drools-kiesession-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ecj\10.0.0\drools-ecj-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\eclipse\jdt\ecj\3.33.0\ecj-3.33.0.jar;C:\Users\gzomo\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-impl\10.0.0\drools-ruleunits-impl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-api\10.0.0\drools-ruleunits-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-codegen\10.0.0\drools-model-codegen-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-codegen-common\10.0.0\drools-codegen-common-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-prototype\10.0.0\drools-model-prototype-10.0.0.jar;C:\Users\gzomo\.m2\repository\com\github\javaparser\javaparser-core\3.25.8\javaparser-core-3.25.8.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-parser\10.0.0\drools-mvel-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-compiler\10.0.0\drools-mvel-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\gzomo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\gzomo\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-classic\1.5.17\logback-classic-1.5.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-core\1.5.17\logback-core-1.5.17.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-dynamic\10.0.0\drools-wiring-dynamic-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-api\10.0.0\drools-wiring-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-memory-compiler\10.0.0\kie-memory-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-util\10.0.0\drools-util-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-api\10.0.0\kie-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-internal\10.0.0\kie-internal-10.0.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire6586234664058042815\surefirebooter-20250515133045040_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.2+7-58"/>
@@ -59,188 +59,100 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="score1BasedOnRTCarbonNumbers" classname="lipid.ElutionOrderTest" time="1.297">
+  <testcase name="score1BasedOnRTCarbonNumbers" classname="lipid.ElutionOrderTest" time="1.248">
     <system-out><![CDATA[score1BasedOnRTCarbonNumbers
-2025-05-15 13:30:46,442 [main] INFO  Creating RuleUnit
-2025-05-15 13:30:47,349 [main] INFO  Insert data
-2025-05-15 13:30:47,364 [main] INFO  Run query. Rules are also fired
-Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 56:3, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=1)
-Scored 1 for annotations: Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=2)
-Scored 1 for annotations: Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=2) and Annotation(TG 56:3, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=2)
+2025-05-15 15:12:56,980 [main] INFO  Creating RuleUnit
+2025-05-15 15:12:57,853 [main] INFO  Insert data
+2025-05-15 15:12:57,869 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 1
-Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=3) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=3)
+Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 1
-Scored 1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=3) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=4)
+Scored 1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=2)
 estoy usando la rule 1
-Scored 1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=4) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=4)
+Scored 1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=2) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=2)
+Annotation 1: 1.0
+Annotation 2: 1.0
+Annotation 3: 1.0
 ]]></system-out>
   </testcase>
   <testcase name="negativeScoreBasedOnRTNumberOfCarbons" classname="lipid.ElutionOrderTest" time="0.0">
-    <failure message="expected:&lt;-1.0&gt; but was:&lt;1.0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<-1.0> but was:<1.0>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:555)
-	at org.junit.Assert.assertEquals(Assert.java:685)
-	at lipid.ElutionOrderTest.negativeScoreBasedOnRTNumberOfCarbons(ElutionOrderTest.java:200)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
     <system-out><![CDATA[negativeScoreBasedOnRTNumberOfCarbons
-2025-05-15 13:30:47,396 [main] INFO  Creating RuleUnit
-2025-05-15 13:30:47,411 [main] INFO  Insert data
-2025-05-15 13:30:47,411 [main] INFO  Run query. Rules are also fired
+2025-05-15 15:12:57,900 [main] INFO  Creating RuleUnit
+2025-05-15 15:12:57,900 [main] INFO  Insert data
+2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 3
-Scored 1 for annotations: Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=1) and Annotation(PC 34:0, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=1)
-estoy usando la rule 3
-Scored 1 for annotations: Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(PC 34:0, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=2)
+Scored 1 for annotations: Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 6
-Scored -1 for annotations: Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=0) and Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=0)
+Scored -1 for annotations: Annotation(PC 34:0, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=-1) and Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=0)
+estoy usando la rule 6
+Scored -1 for annotations: Annotation(PC 34:0, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=-2) and Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=0)
+Annotation 1: 0.0
+Annotation 2: 0.0
+Annotation 3: -1.0
 ]]></system-out>
   </testcase>
-  <testcase name="negativeScoreBasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.016">
+  <testcase name="negativeScoreBasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.0">
     <system-out><![CDATA[negativeScoreBasedOnRTDoubleBonds
-2025-05-15 13:30:47,411 [main] INFO  Creating RuleUnit
-2025-05-15 13:30:47,411 [main] INFO  Insert data
-2025-05-15 13:30:47,411 [main] INFO  Run query. Rules are also fired
+2025-05-15 15:12:57,914 [main] INFO  Creating RuleUnit
+2025-05-15 15:12:57,914 [main] INFO  Insert data
+2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 2
 Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 54:4, mz=883,7749, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 5
 Scored -1 for annotations: Annotation(TG 54:2, mz=887,8062, RT=8,00, adduct=null, intensity=1000000,0, score=-1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=0)
 estoy usando la rule 5
 Scored -1 for annotations: Annotation(TG 54:2, mz=887,8062, RT=8,00, adduct=null, intensity=1000000,0, score=-2) and Annotation(TG 54:4, mz=883,7749, RT=9,00, adduct=null, intensity=100000000,0, score=0)
+Annotation 1: 0.0
+Annotation 2: 0.0
+Annotation 3: -1.0
 ]]></system-out>
   </testcase>
   <testcase name="score1BasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.0">
     <system-out><![CDATA[score1BasedOnRTDoubleBonds
-2025-05-15 13:30:47,411 [main] INFO  Creating RuleUnit
-2025-05-15 13:30:47,411 [main] INFO  Insert data
-2025-05-15 13:30:47,427 [main] INFO  Run query. Rules are also fired
+2025-05-15 15:12:57,914 [main] INFO  Creating RuleUnit
+2025-05-15 15:12:57,914 [main] INFO  Insert data
+2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 2
 Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 54:4, mz=883,7749, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 2
 Scored 1 for annotations: Annotation(TG 54:2, mz=887,8062, RT=11,00, adduct=null, intensity=1000000,0, score=1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=2)
 estoy usando la rule 2
 Scored 1 for annotations: Annotation(TG 54:2, mz=887,8062, RT=11,00, adduct=null, intensity=1000000,0, score=2) and Annotation(TG 54:4, mz=883,7749, RT=9,00, adduct=null, intensity=100000000,0, score=2)
+Annotation 1: 1.0
+Annotation 2: 1.0
+Annotation 3: 1.0
 ]]></system-out>
   </testcase>
   <testcase name="negativeScoreBasedOnLipidType" classname="lipid.ElutionOrderTest" time="0.0">
-    <failure message="expected:&lt;0.0&gt; but was:&lt;0.3333333333333333&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0.0> but was:<0.3333333333333333>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:555)
-	at org.junit.Assert.assertEquals(Assert.java:685)
-	at lipid.ElutionOrderTest.negativeScoreBasedOnLipidType(ElutionOrderTest.java:288)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
     <system-out><![CDATA[negativeScoreBasedOnLipidType
-2025-05-15 13:30:47,427 [main] INFO  Creating RuleUnit
-2025-05-15 13:30:47,427 [main] INFO  Insert data
-2025-05-15 13:30:47,427 [main] INFO  Run query. Rules are also fired
-Scored 1 for annotations: Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1)
+2025-05-15 15:12:57,914 [main] INFO  Creating RuleUnit
+2025-05-15 15:12:57,914 [main] INFO  Insert data
+2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 1
-Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=2) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=2)
+Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 4
-Scored -1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=-1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1)
+Scored -1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=-1) and Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=0)
 estoy usando la rule 4
-Scored -1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=-2) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1)
+Scored -1 for annotations: Annotation(TG 56:3, mz=913,8220, RT=8,00, adduct=null, intensity=1000000,0, score=-2) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=0)
+Annotation 1: 0.0
+Annotation 2: 0.0
+Annotation 3: -1.0
 ]]></system-out>
   </testcase>
   <testcase name="score1BasedOnLipidType" classname="lipid.ElutionOrderTest" time="0.0">
-    <failure message="expected:&lt;1.0&gt; but was:&lt;-1.0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1.0> but was:<-1.0>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:555)
-	at org.junit.Assert.assertEquals(Assert.java:685)
-	at lipid.ElutionOrderTest.score1BasedOnLipidType(ElutionOrderTest.java:151)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
     <system-out><![CDATA[score1BasedOnLipidType
-2025-05-15 13:30:47,427 [main] INFO  Creating RuleUnit
-2025-05-15 13:30:47,427 [main] INFO  Insert data
-2025-05-15 13:30:47,427 [main] INFO  Run query. Rules are also fired
-estoy usando la rule 6
-Scored -1 for annotations: Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=-1) and Annotation(PC 34:0, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=-1)
-estoy usando la rule 6
-Scored -1 for annotations: Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=-2) and Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=-1)
-estoy usando la rule 6
-Scored -1 for annotations: Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=-2) and Annotation(PC 34:0, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=-2)
+2025-05-15 15:12:57,930 [main] INFO  Creating RuleUnit
+2025-05-15 15:12:57,930 [main] INFO  Insert data
+2025-05-15 15:12:57,930 [main] INFO  Run query. Rules are also fired
+estoy usando la rule 3
+Scored 1 for annotations: Annotation(PC 34:0, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=1) and Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=1)
+estoy usando la rule 3
+Scored 1 for annotations: Annotation(PC 34:0, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=2) and Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=1)
+estoy usando la rule 3
+Scored 1 for annotations: Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=2) and Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=2)
+Annotation 1: 1.0
+Annotation 2: 1.0
+Annotation 3: 1.0
 ]]></system-out>
   </testcase>
 </testsuite>

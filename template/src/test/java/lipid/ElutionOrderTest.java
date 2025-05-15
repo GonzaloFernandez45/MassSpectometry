@@ -57,6 +57,10 @@ public class ElutionOrderTest {
 
             // Here the logic that we expect. In this case we expect the full 3 annotations to have a positive score of 1
 
+            System.out.println("Annotation 1: " + annotation1.getNormalizedScore());
+            System.out.println("Annotation 2: " + annotation2.getNormalizedScore());
+            System.out.println("Annotation 3: " + annotation3.getNormalizedScore());
+
             assertEquals(1.0, annotation1.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation2.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation3.getNormalizedScore(), 0.01);
@@ -101,6 +105,10 @@ public class ElutionOrderTest {
             instance.fire();
 
             // Here the logic that we expect. In this case we expect the full 3 annotations to have a positive score of 1
+
+            System.out.println("Annotation 1: " + annotation1.getNormalizedScore());
+            System.out.println("Annotation 2: " + annotation2.getNormalizedScore());
+            System.out.println("Annotation 3: " + annotation3.getNormalizedScore());
 
             assertEquals(1.0, annotation1.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation2.getNormalizedScore(), 0.01);
@@ -147,6 +155,10 @@ public class ElutionOrderTest {
             instance.fire();
 
             // Here the logic that we expect. In this case we expect the full 3 annotations to have a positive score of 1
+
+            System.out.println("Annotation 1: " + annotation1.getNormalizedScore());
+            System.out.println("Annotation 2: " + annotation2.getNormalizedScore());
+            System.out.println("Annotation 3: " + annotation3.getNormalizedScore());
 
             assertEquals(1.0, annotation1.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation2.getNormalizedScore(), 0.01);
@@ -195,6 +207,10 @@ public class ElutionOrderTest {
 
             // Here the logic that we expect. In this case we expect the full 3 annotations to have a positive score of 1
 
+            System.out.println("Annotation 1: " + annotation1.getNormalizedScore());
+            System.out.println("Annotation 2: " + annotation2.getNormalizedScore());
+            System.out.println("Annotation 3: " + annotation3.getNormalizedScore());
+
             assertEquals(0d, annotation1.getNormalizedScore(), 0.01); // !! !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
             assertEquals(0d, annotation2.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
             assertEquals(-1.0, annotation3.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
@@ -240,6 +256,10 @@ public class ElutionOrderTest {
 
             // Here the logic that we expect. In this case we expect the full 3 annotations to have a positive score of 1
 
+            System.out.println("Annotation 1: " + annotation1.getNormalizedScore());
+            System.out.println("Annotation 2: " + annotation2.getNormalizedScore());
+            System.out.println("Annotation 3: " + annotation3.getNormalizedScore());
+
             assertEquals(0d, annotation1.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
             assertEquals(0d, annotation2.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
             assertEquals(-1.0, annotation3.getNormalizedScore(), 0.01); // !! !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
@@ -283,6 +303,10 @@ public class ElutionOrderTest {
             instance.fire();
 
             // Here the logic that we expect. In this case we expect the full 3 annotations to have a positive score of 1
+
+            System.out.println("Annotation 1: " + annotation1.getNormalizedScore());
+            System.out.println("Annotation 2: " + annotation2.getNormalizedScore());
+            System.out.println("Annotation 3: " + annotation3.getNormalizedScore());
 
 
             assertEquals(0d, annotation1.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself

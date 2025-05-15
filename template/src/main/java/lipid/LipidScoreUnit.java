@@ -14,6 +14,7 @@ public class LipidScoreUnit implements RuleUnitData {
     private final DataStore<Annotation> annotations;
 
     public LipidScoreUnit() {
+
         this(DataSource.createStore());
     }
 
@@ -25,5 +26,8 @@ public class LipidScoreUnit implements RuleUnitData {
     public DataStore<Annotation> getAnnotations() {
         return annotations;
     }
+
+
+
 
 }

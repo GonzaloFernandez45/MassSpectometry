@@ -34,7 +34,7 @@ public class AdductDetectionTest {
 
         // Then we should call the algorithmic/knowledge system rules fired to detect the adduct and Set it!
         //
-         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 10d);
 //        String adduct = annotation.detectAdductFromGroupedSignals();
 
         annotation.setAdduct(adduct);
@@ -52,7 +52,7 @@ public class AdductDetectionTest {
         Lipid lipid = new Lipid(1, "PE 36:2", "C41H78NO8P", "PE", 36, 2);
         Annotation annotation = new Annotation(lipid, mh.getMz(), mh.getIntensity(), 7.5d, IonizationMode.POSITIVE, Set.of(mh, mhH2O));
 
-        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 10d);
 //        String adduct = annotation.detectAdductFromGroupedSignals();
 
         annotation.setAdduct(adduct);
@@ -93,7 +93,7 @@ public class AdductDetectionTest {
         double annotationRT = 6.5d;
         Annotation annotation = new Annotation(lipid, mk.getMz(), mk.getIntensity(), annotationRT, IonizationMode.POSITIVE, Set.of(mH, mk));
 
-        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 2d);
 //        String adduct = annotation.detectAdductFromGroupedSignals();
 
         annotation.setAdduct(adduct);

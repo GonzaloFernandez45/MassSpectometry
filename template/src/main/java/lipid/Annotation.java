@@ -255,36 +255,36 @@ public class Annotation {
 //
 
 
-    public static void main(String[] args) {
-        Peak mH = new Peak(700.500, 80000.0); // [M+H]+
-        Peak mNa = new Peak(722.482, 100000.0);  // [M+Na]+
-        Lipid lipid = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
-
-        double annotationMZ = 722.482d;
-        double annotationIntensity = 100000.0;
-        double annotationRT = 6.5d;
-        Annotation annotation = new Annotation(lipid, annotationMZ, annotationIntensity, annotationRT, IonizationMode.POSITIVE, Set.of(mH, mNa));
-        System.out.println(annotation);
-
-        System.out.println("_");
-
-        Peak singlyCharged = new Peak(700.500, 100000.0);  // [M+H]+
-        Peak doublyCharged = new Peak(350.754, 85000.0);   // [M+2H]2+
-
-        Lipid lipid1 = new Lipid(3, "TG 54:3", "C57H104O6", "TG", 54, 3);
-        Annotation annotation1 = new Annotation(lipid1, singlyCharged.getMz(), singlyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
-        System.out.println(annotation1);
-
-        System.out.println("_");
-
-        Peak mH2 = new Peak(700.500, 100000.0); // [M+H]+
-        Peak mk2 = new Peak(738.4564, 80000.0);  // [M+k]+
-        Lipid lipid2 = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
-
-        double annotationRT2 = 6.5d;
-        Annotation annotation2 = new Annotation(lipid, mk2.getMz(), mk2.getIntensity(), annotationRT2, IonizationMode.POSITIVE, Set.of(mH, mk2));
-        System.out.println(annotation2);
-    }
+//    public static void main(String[] args) {
+//        Peak mH = new Peak(700.500, 80000.0); // [M+H]+
+//        Peak mNa = new Peak(722.482, 100000.0);  // [M+Na]+
+//        Lipid lipid = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
+//
+//        double annotationMZ = 722.482d;
+//        double annotationIntensity = 100000.0;
+//        double annotationRT = 6.5d;
+//        Annotation annotation = new Annotation(lipid, annotationMZ, annotationIntensity, annotationRT, IonizationMode.POSITIVE, Set.of(mH, mNa));
+//        System.out.println(annotation);
+//
+//        System.out.println("_");
+//
+//        Peak singlyCharged = new Peak(700.500, 100000.0);  // [M+H]+
+//        Peak doublyCharged = new Peak(350.754, 85000.0);   // [M+2H]2+
+//
+//        Lipid lipid1 = new Lipid(3, "TG 54:3", "C57H104O6", "TG", 54, 3);
+//        Annotation annotation1 = new Annotation(lipid1, singlyCharged.getMz(), singlyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
+//        System.out.println(annotation1);
+//
+//        System.out.println("_");
+//
+//        Peak mH2 = new Peak(700.500, 100000.0); // [M+H]+
+//        Peak mk2 = new Peak(738.4564, 80000.0);  // [M+k]+
+//        Lipid lipid2 = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
+//
+//        double annotationRT2 = 6.5d;
+//        Annotation annotation2 = new Annotation(lipid, mk2.getMz(), mk2.getIntensity(), annotationRT2, IonizationMode.POSITIVE, Set.of(mH, mk2));
+//        System.out.println(annotation2);
+//    }
 
 }
 
