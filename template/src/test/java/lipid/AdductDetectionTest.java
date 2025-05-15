@@ -35,8 +35,6 @@ public class AdductDetectionTest {
         // Then we should call the algorithmic/knowledge system rules fired to detect the adduct and Set it!
         //
          String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 10d);
-//        String adduct = annotation.detectAdductFromGroupedSignals();
-
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+H]+ should be detected", annotation.getAdduct());
@@ -53,8 +51,6 @@ public class AdductDetectionTest {
         Annotation annotation = new Annotation(lipid, mh.getMz(), mh.getIntensity(), 7.5d, IonizationMode.POSITIVE, Set.of(mh, mhH2O));
 
         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 10d);
-//        String adduct = annotation.detectAdductFromGroupedSignals();
-
         annotation.setAdduct(adduct);
 
 
@@ -74,7 +70,6 @@ public class AdductDetectionTest {
         Annotation annotation = new Annotation(lipid, singlyCharged.getMz(), singlyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
 
         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE,10d);
-//        String adduct = annotation.detectAdductFromGroupedSignals();
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+H]+ should be detected", annotation.getAdduct());
@@ -94,8 +89,6 @@ public class AdductDetectionTest {
         Annotation annotation = new Annotation(lipid, mk.getMz(), mk.getIntensity(), annotationRT, IonizationMode.POSITIVE, Set.of(mH, mk));
 
         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 2d);
-//        String adduct = annotation.detectAdductFromGroupedSignals();
-
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+K]+ should be detected", annotation.getAdduct());
@@ -113,8 +106,6 @@ public class AdductDetectionTest {
         Annotation annotation = new Annotation(lipid, mhH2O.getMz(), mhH2O.getIntensity(), 7.5d, IonizationMode.POSITIVE, Set.of(mh, mhH2O));
 
         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE, 0.2d);
-//        String adduct = annotation.detectAdductFromGroupedSignals();
-
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+H-H2O]+ should be detected", annotation.getAdduct());
@@ -134,12 +125,63 @@ public class AdductDetectionTest {
 
 
         String adduct = annotation.detectAdductFromSignals(IonizationMode.POSITIVE,10d);
-//        String adduct = annotation.detectAdductFromGroupedSignals();
         annotation.setAdduct(adduct);
 
         assertNotNull("[M+2H]2+ should be detected", annotation.getAdduct());
 
         assertEquals( "Adduct inferred from lowest mz in group","[M+2H]2+", annotation.getAdduct());
     }
+
+
+    //NEGATIVE IONIZATION MODE TESTS
+
+    @Test
+    public void shouldDetectNegativeAdductBasedOnMzDifference() {
+        // [M–H]– y [M+Cl]– tienen una diferencia de ~36.96 Da
+        Peak mH = new Peak(700.500, 100000.0);      // [M–H]–
+        Peak mCl = new Peak(737.460, 80000.0);      // [M+Cl]–
+
+        Lipid lipid = new Lipid(4, "PI 38:4", "C47H83O13P", "PI", 38, 4);
+        Annotation annotation = new Annotation(lipid, mH.getMz(), mH.getIntensity(), 8.0, IonizationMode.NEGATIVE, Set.of(mH, mCl));
+
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.NEGATIVE, 10d);
+        annotation.setAdduct(adduct);
+
+        assertNotNull("[M-H]− should be detected", annotation.getAdduct());
+        assertEquals("[M-H]−", annotation.getAdduct());
+    }
+
+    @Test
+    public void shouldDetectNegativeLossOfWaterAdduct() {
+        // [M–H]– y [M–H–H2O]– diferencia de ~18.0106 Da
+        Peak mh = new Peak(700.500, 90000.0);         // [M–H]–
+        Peak mhH2O = new Peak(682.4894, 70000.0);      // [M–H–H₂O]–
+
+        Lipid lipid = new Lipid(5, "PS 36:2", "C42H76NO10P", "PS", 36, 2);
+        Annotation annotation = new Annotation(lipid, mhH2O.getMz(), mhH2O.getIntensity(), 7.5, IonizationMode.NEGATIVE, Set.of(mh, mhH2O));
+
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.NEGATIVE, 5d);
+        annotation.setAdduct(adduct);
+
+        assertNotNull("[M-H-H2O]− should be detected", annotation.getAdduct());
+        assertEquals("[M-H-H2O]−", annotation.getAdduct());
+    }
+
+    @Test
+    public void shouldDetectNegativeAdductWithFormicAcid() {
+        // [M–H]– y [M+HCOOH-H]– diferencia de ~44.9982 Da
+        Peak mH = new Peak(600.300, 95000.0);              // [M–H]–
+        Peak mFormic = new Peak(645.2982, 85000.0);        // [M+HCOOH-H]– = 600.300 + 44.9982
+
+        Lipid lipid = new Lipid(6, "PE 36:4", "C41H72NO8P", "PE", 36, 4);
+        Annotation annotation = new Annotation(lipid, mFormic.getMz(), mFormic.getIntensity(), 6.8, IonizationMode.NEGATIVE, Set.of(mH, mFormic));
+
+        String adduct = annotation.detectAdductFromSignals(IonizationMode.NEGATIVE, 5d);
+        annotation.setAdduct(adduct);
+
+        assertNotNull("[M+HCOOH-H]− should be detected", annotation.getAdduct());
+        assertEquals("[M+HCOOH-H]−", annotation.getAdduct());
+    }
+
 
 }

@@ -155,6 +155,7 @@ public class Annotation {
                 System.out.println("\n--- Probando aducto para la anotación: " + adductAnnotation + " ---");
                 System.out.println("Masa monoisotópica estimada de la anotación con " + adductAnnotation + ": " + monoisotopicMassAdduct);
 
+
                 // Recorremos cada uno de los picos agrupados dentro de la anotación
 
                 for (Peak peak : groupedSignals) {
@@ -163,41 +164,62 @@ public class Annotation {
 
                     if (Math.abs(peakMz - this.mz) <= mzTolerance) {
                         //It's the same peak as the objective, so I skip it.
-                        System.out.println("Skip: same as observedMz");
                         continue;
                     }
 
                     // Probamos todos los posibles aductos para ese peak
-                    //I try all the possible adducts for this otherPeak
                     for (Map.Entry<String, Double> entry2 : AdductList.MAPMZPOSITIVEADDUCTS.entrySet()) {
-                            String adductPeak = entry2.getKey();
-                            double mzForThatPeak = Adduct.getMZFromMonoisotopicMass(monoisotopicMassAdduct, adductPeak);
-                            double diff = Math.abs(mzForThatPeak - peakMz);
-                            System.out.println("secondAdduct=" + adductPeak + ", expectedMz=" + mzForThatPeak + ", observed=" + peakMz + ", diff=" + diff);
-                            if (diff <= mzTolerance) {
-                                System.out.println("DETECTED adduct: " + adductAnnotation + " (via " + adductPeak + ")");
-                                return adductAnnotation;
-                             }
+                        String adductPeak = entry2.getKey();
+                        double mzForThatPeak = Adduct.getMZFromMonoisotopicMass(monoisotopicMassAdduct, adductPeak);
+                        double diff = Math.abs(mzForThatPeak - peakMz);
+                        System.out.println("secondAdduct=" + adductPeak + ", expectedMz=" + mzForThatPeak + ", observed=" + peakMz + ", diff=" + diff);
+                        if (diff <= mzTolerance) {
+                            System.out.println("DETECTED adduct: " + adductAnnotation + " (via " + adductPeak + ")");
+                            return adductAnnotation;
+                        }
                     }
                 }
 
 
-
             }
-            }else if (ionizationMode == IonizationMode.NEGATIVE) {
+        } else if (ionizationMode == IonizationMode.NEGATIVE) {
+            // Recorremos todos los posibles aductos para la anotación principal
+            for (Map.Entry<String, Double> entry : AdductList.MAPMZNEGATIVEADDUCTS.entrySet()) {
+
+                String adductAnnotation = entry.getKey();
+                double monoisotopicMassAdduct = Adduct.getMonoisotopicMassFromMZ(this.mz, adductAnnotation);
+
+                System.out.println("\n--- Probando aducto para la anotación: " + adductAnnotation + " ---");
+                System.out.println("Masa monoisotópica estimada de la anotación con " + adductAnnotation + ": " + monoisotopicMassAdduct);
+
+
+                // Recorremos cada uno de los picos agrupados dentro de la anotación
+
                 for (Peak peak : groupedSignals) {
-                    double monoisotopicMassPeak = Adduct.getMonoisotopicMassFromMZ(peak.getMz(), "");
-                    for (Map.Entry<String, Double> entry : AdductList.MAPMZNEGATIVEADDUCTS.entrySet()) {
-                        double monoisotopicMassAdduct = Adduct.getMonoisotopicMassFromMZ(mz, entry.getKey());
-                        int ppmIncrement = Adduct.calculatePPMIncrement(monoisotopicMassPeak, monoisotopicMassAdduct);
-                        if (ppmIncrement <= mzTolerance) {
-                            return entry.getKey();
+                    double peakMz = peak.getMz();
+                    System.out.println("\n   Analizando peak con m/z = " + peakMz);
+
+                    if (Math.abs(peakMz - this.mz) <= mzTolerance) {
+                        //It's the same peak as the objective, so I skip it.
+                        continue;
+                    }
+
+                    // Probamos todos los posibles aductos para ese peak
+                    for (Map.Entry<String, Double> entry2 : AdductList.MAPMZNEGATIVEADDUCTS.entrySet()) {
+                        String adductPeak = entry2.getKey();
+                        double mzForThatPeak = Adduct.getMZFromMonoisotopicMass(monoisotopicMassAdduct, adductPeak);
+                        double diff = Math.abs(mzForThatPeak - peakMz);
+                        System.out.println("secondAdduct=" + adductPeak + ", expectedMz=" + mzForThatPeak + ", observed=" + peakMz + ", diff=" + diff);
+                        if (diff <= mzTolerance) {
+                            System.out.println("DETECTED adduct: " + adductAnnotation + " (via " + adductPeak + ")");
+                            return adductAnnotation;
                         }
                     }
                 }
             }
-            return "Unkown";
         }
+        return "Unkown";
+    }
 
 //    public String detectAdductFromGroupedSignals() {
 //        double mzTolerance = 0.2;

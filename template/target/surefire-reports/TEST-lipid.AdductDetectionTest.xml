@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.AdductDetectionTest" time="0.149" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.AdductDetectionTest" time="0.179" tests="10" errors="0" skipped="0" failures="4">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Users\gzomo\.jdks\openjdk-23.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751 2025-05-15T15-12-55_373-jvmRun1 surefire-20250515151255549_1tmp surefire_0-20250515151255549_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire17956861882591147434\surefirebooter-20250515201155094_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire17956861882591147434 2025-05-15T20-11-54_918-jvmRun1 surefire-20250515201155094_1tmp surefire_0-20250515201155094_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\test-classes;C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\classes;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-engine\10.0.0\drools-ruleunits-engine-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-dsl\10.0.0\drools-ruleunits-dsl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-canonical-model\10.0.0\drools-canonical-model-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-compiler\10.0.0\drools-model-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-maven-support\10.0.0\kie-util-maven-support-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-core\10.0.0\drools-core-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-xml\10.0.0\kie-util-xml-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-base\10.0.0\drools-base-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-static\10.0.0\drools-wiring-static-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-io\10.0.0\drools-io-10.0.0.jar;C:\Users\gzomo\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-compiler\10.0.0\drools-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-parser\10.0.0\drools-drl-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-extensions\10.0.0\drools-drl-extensions-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-ast\10.0.0\drools-drl-ast-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-kiesession\10.0.0\drools-kiesession-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ecj\10.0.0\drools-ecj-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\eclipse\jdt\ecj\3.33.0\ecj-3.33.0.jar;C:\Users\gzomo\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-impl\10.0.0\drools-ruleunits-impl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-api\10.0.0\drools-ruleunits-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-codegen\10.0.0\drools-model-codegen-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-codegen-common\10.0.0\drools-codegen-common-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-prototype\10.0.0\drools-model-prototype-10.0.0.jar;C:\Users\gzomo\.m2\repository\com\github\javaparser\javaparser-core\3.25.8\javaparser-core-3.25.8.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-parser\10.0.0\drools-mvel-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-compiler\10.0.0\drools-mvel-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\gzomo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\gzomo\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-classic\1.5.17\logback-classic-1.5.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-core\1.5.17\logback-core-1.5.17.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-dynamic\10.0.0\drools-wiring-dynamic-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-api\10.0.0\drools-wiring-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-memory-compiler\10.0.0\kie-memory-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-util\10.0.0\drools-util-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-api\10.0.0\kie-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-internal\10.0.0\kie-internal-10.0.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire17956861882591147434\surefirebooter-20250515201155094_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.2+7-58"/>
@@ -59,234 +59,269 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="shouldDetectAdductBasedOnMzk" classname="lipid.AdductDetectionTest" time="0.047">
+  <testcase name="shouldDetectNegativeLossOfWaterAdduct" classname="lipid.AdductDetectionTest" time="0.053">
+    <failure message="expected:&lt;[M[–H–H2O]–]&gt; but was:&lt;[M[-H-H2O]−]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[M[–H–H2O]–]> but was:<[M[-H-H2O]−]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at lipid.AdductDetectionTest.shouldDetectNegativeLossOfWaterAdduct(AdductDetectionTest.java:167)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[
---- Probando aducto para la anotación: [M+H]+ ---
-Masa monoisotópica estimada de la anotación con [M+H]+: 737.449124
+   Analizando peak con m/z = 682.4894
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=738.4564, observed=700.5, diff=37.95640000000003
-secondAdduct=[M+2H]2+, expectedMz=370.739114, observed=700.5, diff=329.760886
-secondAdduct=[M+Na]+, expectedMz=760.438342, observed=700.5, diff=59.938342000000034
-secondAdduct=[M+K]+, expectedMz=776.412282, observed=700.5, diff=75.912282
-secondAdduct=[M+NH4]+, expectedMz=755.482947, observed=700.5, diff=54.98294699999997
-secondAdduct=[M+H-H2O]+, expectedMz=720.445924, observed=700.5, diff=19.94592399999999
-secondAdduct=[M+H+NH4]2+, expectedMz=387.766212, observed=700.5, diff=312.733788
-secondAdduct=[2M+H]+, expectedMz=738.4564, observed=700.5, diff=37.95640000000003
-secondAdduct=[2M+Na]+, expectedMz=760.438342, observed=700.5, diff=59.938342000000034
+
+   Analizando peak con m/z = 682.4894
+
+   Analizando peak con m/z = 700.5
+
+   Analizando peak con m/z = 682.4894
+
+   Analizando peak con m/z = 700.5
+
+   Analizando peak con m/z = 682.4894
+
+   Analizando peak con m/z = 700.5
+DETECTED adduct: [M-H-H2O]− (via [M-H]−)
+]]></system-out>
+  </testcase>
+  <testcase name="shouldDetectNegativeAdductBasedOnMzDifference" classname="lipid.AdductDetectionTest" time="0.002">
+    <failure message="expected:&lt;[M[–H]–]&gt; but was:&lt;[M[-H]−]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[M[–H]–]> but was:<[M[-H]−]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at lipid.AdductDetectionTest.shouldDetectNegativeAdductBasedOnMzDifference(AdductDetectionTest.java:151)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[
+   Analizando peak con m/z = 700.5
+
+   Analizando peak con m/z = 737.46
+DETECTED adduct: [M-H]− (via [M+Cl]−)
+]]></system-out>
+  </testcase>
+  <testcase name="shouldDetectAdductBasedOnMzk" classname="lipid.AdductDetectionTest" time="0.002">
+    <system-out><![CDATA[
+   Analizando peak con m/z = 700.5
 
    Analizando peak con m/z = 738.4564
-Skip: same as observedMz
-
---- Probando aducto para la anotación: [M+2H]2+ ---
-Masa monoisotópica estimada de la anotación con [M+2H]2+: 1472.883696
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=1473.8909720000001, observed=700.5, diff=773.3909720000001
-secondAdduct=[M+2H]2+, expectedMz=738.4564, observed=700.5, diff=37.95640000000003
-secondAdduct=[M+Na]+, expectedMz=1495.872914, observed=700.5, diff=795.372914
-secondAdduct=[M+K]+, expectedMz=1511.8468540000001, observed=700.5, diff=811.3468540000001
-secondAdduct=[M+NH4]+, expectedMz=1490.917519, observed=700.5, diff=790.4175190000001
-secondAdduct=[M+H-H2O]+, expectedMz=1455.880496, observed=700.5, diff=755.380496
-secondAdduct=[M+H+NH4]2+, expectedMz=755.483498, observed=700.5, diff=54.983498000000054
-secondAdduct=[2M+H]+, expectedMz=1473.8909720000001, observed=700.5, diff=773.3909720000001
-secondAdduct=[2M+Na]+, expectedMz=1495.872914, observed=700.5, diff=795.372914
 
    Analizando peak con m/z = 738.4564
-Skip: same as observedMz
-
---- Probando aducto para la anotación: [M+Na]+ ---
-Masa monoisotópica estimada de la anotación con [M+Na]+: 715.467182
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=716.474458, observed=700.5, diff=15.974458000000027
-secondAdduct=[M+2H]2+, expectedMz=359.74814299999997, observed=700.5, diff=340.75185700000003
-secondAdduct=[M+Na]+, expectedMz=738.4564, observed=700.5, diff=37.95640000000003
-secondAdduct=[M+K]+, expectedMz=754.43034, observed=700.5, diff=53.93034
-secondAdduct=[M+NH4]+, expectedMz=733.501005, observed=700.5, diff=33.001004999999964
-secondAdduct=[M+H-H2O]+, expectedMz=698.463982, observed=700.5, diff=2.0360180000000128
-secondAdduct=[M+H+NH4]2+, expectedMz=376.775241, observed=700.5, diff=323.724759
-secondAdduct=[2M+H]+, expectedMz=716.474458, observed=700.5, diff=15.974458000000027
-secondAdduct=[2M+Na]+, expectedMz=738.4564, observed=700.5, diff=37.95640000000003
 
    Analizando peak con m/z = 738.4564
-Skip: same as observedMz
-
---- Probando aducto para la anotación: [M+K]+ ---
-Masa monoisotópica estimada de la anotación con [M+K]+: 699.493242
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=700.500518, observed=700.5, diff=5.180000000564178E-4
 DETECTED adduct: [M+K]+ (via [M+H]+)
 [M+K]+
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectDoublyChargedAdduct" classname="lipid.AdductDetectionTest" time="0.0">
+  <testcase name="shouldDetectDoublyChargedAdduct" classname="lipid.AdductDetectionTest" time="0.001">
     <system-out><![CDATA[
---- Probando aducto para la anotación: [M+H]+ ---
-Masa monoisotópica estimada de la anotación con [M+H]+: 700.492724
-
    Analizando peak con m/z = 350.754
-secondAdduct=[M+H]+, expectedMz=701.5, observed=350.754, diff=350.746
-secondAdduct=[M+2H]2+, expectedMz=352.26091399999996, observed=350.754, diff=1.506913999999938
 DETECTED adduct: [M+H]+ (via [M+2H]2+)
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectAdductBasedOnMzDifference" classname="lipid.AdductDetectionTest" time="0.024">
+  <testcase name="shouldDetectAdductBasedOnMzDifference" classname="lipid.AdductDetectionTest" time="0.002">
     <system-out><![CDATA[
---- Probando aducto para la anotación: [M+H]+ ---
-Masa monoisotópica estimada de la anotación con [M+H]+: 699.492714
-
    Analizando peak con m/z = 700.5
-Skip: same as observedMz
 
    Analizando peak con m/z = 722.482
-secondAdduct=[M+H]+, expectedMz=700.49999, observed=722.482, diff=21.982009999999946
-secondAdduct=[M+2H]2+, expectedMz=351.76090899999997, observed=722.482, diff=370.721091
-secondAdduct=[M+Na]+, expectedMz=722.481932, observed=722.482, diff=6.799999994200334E-5
 DETECTED adduct: [M+H]+ (via [M+Na]+)
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectLossOfWaterAdduct" classname="lipid.AdductDetectionTest" time="0.0">
+  <testcase name="shouldDetectNegativeAdductWithFormate" classname="lipid.AdductDetectionTest" time="0.002">
+    <failure message="expected:&lt;[[M+HCOO-H]–]&gt; but was:&lt;[Unkown]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[[M+HCOO-H]–]> but was:<[Unkown]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at lipid.AdductDetectionTest.shouldDetectNegativeAdductWithFormate(AdductDetectionTest.java:183)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[
---- Probando aducto para la anotación: [M+H]+ ---
-Masa monoisotópica estimada de la anotación con [M+H]+: 699.492724
+   Analizando peak con m/z = 600.3
 
+   Analizando peak con m/z = 645.2976
+
+   Analizando peak con m/z = 600.3
+
+   Analizando peak con m/z = 645.2976
+
+   Analizando peak con m/z = 600.3
+
+   Analizando peak con m/z = 645.2976
+
+   Analizando peak con m/z = 600.3
+
+   Analizando peak con m/z = 645.2976
+
+   Analizando peak con m/z = 600.3
+
+   Analizando peak con m/z = 645.2976
+
+   Analizando peak con m/z = 600.3
+
+   Analizando peak con m/z = 645.2976
+]]></system-out>
+  </testcase>
+  <testcase name="shouldDetectLossOfWaterAdduct" classname="lipid.AdductDetectionTest" time="0.002">
+    <system-out><![CDATA[
    Analizando peak con m/z = 682.4894
-secondAdduct=[M+H]+, expectedMz=700.5, observed=682.4894, diff=18.010599999999954
-secondAdduct=[M+2H]2+, expectedMz=351.76091399999996, observed=682.4894, diff=330.7284860000001
-secondAdduct=[M+Na]+, expectedMz=722.481942, observed=682.4894, diff=39.99254199999996
-secondAdduct=[M+K]+, expectedMz=738.455882, observed=682.4894, diff=55.96648199999993
-secondAdduct=[M+NH4]+, expectedMz=717.5265469999999, observed=682.4894, diff=35.03714699999989
-secondAdduct=[M+H-H2O]+, expectedMz=682.489524, observed=682.4894, diff=1.2399999991430377E-4
 DETECTED adduct: [M+H]+ (via [M+H-H2O]+)
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectLossOfWaterAdduct1" classname="lipid.AdductDetectionTest" time="0.0">
+  <testcase name="shouldDetectLossOfWaterAdduct1" classname="lipid.AdductDetectionTest" time="0.002">
     <system-out><![CDATA[
---- Probando aducto para la anotación: [M+H]+ ---
-Masa monoisotópica estimada de la anotación con [M+H]+: 681.482124
-
    Analizando peak con m/z = 682.4894
-Skip: same as observedMz
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-secondAdduct=[M+2H]2+, expectedMz=342.755614, observed=700.5, diff=357.744386
-secondAdduct=[M+Na]+, expectedMz=704.471342, observed=700.5, diff=3.9713420000000497
-secondAdduct=[M+K]+, expectedMz=720.445282, observed=700.5, diff=19.94528200000002
-secondAdduct=[M+NH4]+, expectedMz=699.515947, observed=700.5, diff=0.9840530000000172
-secondAdduct=[M+H-H2O]+, expectedMz=664.478924, observed=700.5, diff=36.021075999999994
-secondAdduct=[M+H+NH4]2+, expectedMz=359.782712, observed=700.5, diff=340.717288
-secondAdduct=[2M+H]+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-secondAdduct=[2M+Na]+, expectedMz=704.471342, observed=700.5, diff=3.9713420000000497
-
---- Probando aducto para la anotación: [M+2H]2+ ---
-Masa monoisotópica estimada de la anotación con [M+2H]2+: 1360.9496960000001
 
    Analizando peak con m/z = 682.4894
-Skip: same as observedMz
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=1361.9569720000002, observed=700.5, diff=661.4569720000002
-secondAdduct=[M+2H]2+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-secondAdduct=[M+Na]+, expectedMz=1383.938914, observed=700.5, diff=683.4389140000001
-secondAdduct=[M+K]+, expectedMz=1399.9128540000002, observed=700.5, diff=699.4128540000002
-secondAdduct=[M+NH4]+, expectedMz=1378.9835190000001, observed=700.5, diff=678.4835190000001
-secondAdduct=[M+H-H2O]+, expectedMz=1343.946496, observed=700.5, diff=643.446496
-secondAdduct=[M+H+NH4]2+, expectedMz=699.5164980000001, observed=700.5, diff=0.9835019999999304
-secondAdduct=[2M+H]+, expectedMz=1361.9569720000002, observed=700.5, diff=661.4569720000002
-secondAdduct=[2M+Na]+, expectedMz=1383.938914, observed=700.5, diff=683.4389140000001
-
---- Probando aducto para la anotación: [M+Na]+ ---
-Masa monoisotópica estimada de la anotación con [M+Na]+: 659.500182
 
    Analizando peak con m/z = 682.4894
-Skip: same as observedMz
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=660.507458, observed=700.5, diff=39.99254199999996
-secondAdduct=[M+2H]2+, expectedMz=331.764643, observed=700.5, diff=368.735357
-secondAdduct=[M+Na]+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-secondAdduct=[M+K]+, expectedMz=698.46334, observed=700.5, diff=2.0366599999999835
-secondAdduct=[M+NH4]+, expectedMz=677.534005, observed=700.5, diff=22.96599500000002
-secondAdduct=[M+H-H2O]+, expectedMz=642.496982, observed=700.5, diff=58.003018
-secondAdduct=[M+H+NH4]2+, expectedMz=348.791741, observed=700.5, diff=351.708259
-secondAdduct=[2M+H]+, expectedMz=660.507458, observed=700.5, diff=39.99254199999996
-secondAdduct=[2M+Na]+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-
---- Probando aducto para la anotación: [M+K]+ ---
-Masa monoisotópica estimada de la anotación con [M+K]+: 643.526242
 
    Analizando peak con m/z = 682.4894
-Skip: same as observedMz
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=644.5335180000001, observed=700.5, diff=55.96648199999993
-secondAdduct=[M+2H]2+, expectedMz=323.777673, observed=700.5, diff=376.722327
-secondAdduct=[M+Na]+, expectedMz=666.5154600000001, observed=700.5, diff=33.984539999999924
-secondAdduct=[M+K]+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-secondAdduct=[M+NH4]+, expectedMz=661.560065, observed=700.5, diff=38.93993499999999
-secondAdduct=[M+H-H2O]+, expectedMz=626.523042, observed=700.5, diff=73.97695799999997
-secondAdduct=[M+H+NH4]2+, expectedMz=340.804771, observed=700.5, diff=359.695229
-secondAdduct=[2M+H]+, expectedMz=644.5335180000001, observed=700.5, diff=55.96648199999993
-secondAdduct=[2M+Na]+, expectedMz=666.5154600000001, observed=700.5, diff=33.984539999999924
-
---- Probando aducto para la anotación: [M+NH4]+ ---
-Masa monoisotópica estimada de la anotación con [M+NH4]+: 664.4555770000001
 
    Analizando peak con m/z = 682.4894
-Skip: same as observedMz
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=665.4628530000001, observed=700.5, diff=35.03714699999989
-secondAdduct=[M+2H]2+, expectedMz=334.2423405, observed=700.5, diff=366.2576595
-secondAdduct=[M+Na]+, expectedMz=687.4447950000001, observed=700.5, diff=13.055204999999887
-secondAdduct=[M+K]+, expectedMz=703.4187350000001, observed=700.5, diff=2.9187350000000833
-secondAdduct=[M+NH4]+, expectedMz=682.4894, observed=700.5, diff=18.010599999999954
-secondAdduct=[M+H-H2O]+, expectedMz=647.4523770000001, observed=700.5, diff=53.04762299999993
-secondAdduct=[M+H+NH4]2+, expectedMz=351.26943850000004, observed=700.5, diff=349.23056149999996
-secondAdduct=[2M+H]+, expectedMz=665.4628530000001, observed=700.5, diff=35.03714699999989
-secondAdduct=[2M+Na]+, expectedMz=687.4447950000001, observed=700.5, diff=13.055204999999887
-
---- Probando aducto para la anotación: [M+H-H2O]+ ---
-Masa monoisotópica estimada de la anotación con [M+H-H2O]+: 699.4926
 
    Analizando peak con m/z = 682.4894
-Skip: same as observedMz
 
    Analizando peak con m/z = 700.5
-secondAdduct=[M+H]+, expectedMz=700.4998760000001, observed=700.5, diff=1.2399999991430377E-4
 DETECTED adduct: [M+H-H2O]+ (via [M+H]+)
 ]]></system-out>
   </testcase>
-  <testcase name="shouldDetectDoublyChargedAdduct2" classname="lipid.AdductDetectionTest" time="0.0">
+  <testcase name="shouldDetectDominantNegativeAdductPeak" classname="lipid.AdductDetectionTest" time="0.002">
+    <failure message="expected:&lt;[[M–H]–]&gt; but was:&lt;[Unknown]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[[M–H]–]> but was:<[Unknown]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at lipid.AdductDetectionTest.shouldDetectDominantNegativeAdductPeak(AdductDetectionTest.java:198)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[detectAdduct: Not enough signals (1)
+]]></system-out>
+  </testcase>
+  <testcase name="shouldDetectDoublyChargedAdduct2" classname="lipid.AdductDetectionTest" time="0.001">
     <system-out><![CDATA[
---- Probando aducto para la anotación: [M+H]+ ---
-Masa monoisotópica estimada de la anotación con [M+H]+: 349.74672400000003
-
    Analizando peak con m/z = 350.754
-Skip: same as observedMz
 
    Analizando peak con m/z = 701.5
-secondAdduct=[M+H]+, expectedMz=350.754, observed=701.5, diff=350.746
-secondAdduct=[M+2H]2+, expectedMz=176.88791400000002, observed=701.5, diff=524.612086
-secondAdduct=[M+Na]+, expectedMz=372.735942, observed=701.5, diff=328.764058
-secondAdduct=[M+K]+, expectedMz=388.70988200000005, observed=701.5, diff=312.79011799999995
-secondAdduct=[M+NH4]+, expectedMz=367.780547, observed=701.5, diff=333.719453
-secondAdduct=[M+H-H2O]+, expectedMz=332.74352400000004, observed=701.5, diff=368.75647599999996
-secondAdduct=[M+H+NH4]2+, expectedMz=193.91501200000002, observed=701.5, diff=507.58498799999995
-secondAdduct=[2M+H]+, expectedMz=350.754, observed=701.5, diff=350.746
-secondAdduct=[2M+Na]+, expectedMz=372.735942, observed=701.5, diff=328.764058
-
---- Probando aducto para la anotación: [M+2H]2+ ---
-Masa monoisotópica estimada de la anotación con [M+2H]2+: 697.4788960000001
 
    Analizando peak con m/z = 350.754
-Skip: same as observedMz
 
    Analizando peak con m/z = 701.5
-secondAdduct=[M+H]+, expectedMz=698.4861720000001, observed=701.5, diff=3.013827999999876
 DETECTED adduct: [M+2H]2+ (via [M+H]+)
 ]]></system-out>
   </testcase>

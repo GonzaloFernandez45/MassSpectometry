@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.ElutionOrderTest" time="1.278" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="lipid.ElutionOrderTest" time="1.37" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Users\gzomo\.jdks\openjdk-23.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751 2025-05-15T15-12-55_373-jvmRun1 surefire-20250515151255549_1tmp surefire_0-20250515151255549_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\gzomo\AppData\Local\Temp\surefire17956861882591147434\surefirebooter-20250515201155094_3.jar C:\Users\gzomo\AppData\Local\Temp\surefire17956861882591147434 2025-05-15T20-11-54_918-jvmRun1 surefire-20250515201155094_1tmp surefire_0-20250515201155094_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\test-classes;C:\Users\gzomo\Desktop\Sistemas de Soporte a la Decisión - CEU\Practica\templateLCMSPracticeFinal\template\target\classes;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-engine\10.0.0\drools-ruleunits-engine-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-dsl\10.0.0\drools-ruleunits-dsl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-canonical-model\10.0.0\drools-canonical-model-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-compiler\10.0.0\drools-model-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-maven-support\10.0.0\kie-util-maven-support-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-core\10.0.0\drools-core-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-util-xml\10.0.0\kie-util-xml-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-base\10.0.0\drools-base-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-static\10.0.0\drools-wiring-static-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-io\10.0.0\drools-io-10.0.0.jar;C:\Users\gzomo\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-compiler\10.0.0\drools-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-parser\10.0.0\drools-drl-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-extensions\10.0.0\drools-drl-extensions-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-drl-ast\10.0.0\drools-drl-ast-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-kiesession\10.0.0\drools-kiesession-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ecj\10.0.0\drools-ecj-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\eclipse\jdt\ecj\3.33.0\ecj-3.33.0.jar;C:\Users\gzomo\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-impl\10.0.0\drools-ruleunits-impl-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-ruleunits-api\10.0.0\drools-ruleunits-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-codegen\10.0.0\drools-model-codegen-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-codegen-common\10.0.0\drools-codegen-common-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-model-prototype\10.0.0\drools-model-prototype-10.0.0.jar;C:\Users\gzomo\.m2\repository\com\github\javaparser\javaparser-core\3.25.8\javaparser-core-3.25.8.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-parser\10.0.0\drools-mvel-parser-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-mvel-compiler\10.0.0\drools-mvel-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\gzomo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\gzomo\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-classic\1.5.17\logback-classic-1.5.17.jar;C:\Users\gzomo\.m2\repository\ch\qos\logback\logback-core\1.5.17\logback-core-1.5.17.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-dynamic\10.0.0\drools-wiring-dynamic-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-wiring-api\10.0.0\drools-wiring-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-memory-compiler\10.0.0\kie-memory-compiler-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\drools\drools-util\10.0.0\drools-util-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-api\10.0.0\kie-api-10.0.0.jar;C:\Users\gzomo\.m2\repository\org\kie\kie-internal\10.0.0\kie-internal-10.0.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire9761818654207761751\surefirebooter-20250515151255549_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\gzomo\AppData\Local\Temp\surefire17956861882591147434\surefirebooter-20250515201155094_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.2+7-58"/>
@@ -59,11 +59,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="score1BasedOnRTCarbonNumbers" classname="lipid.ElutionOrderTest" time="1.248">
+  <testcase name="score1BasedOnRTCarbonNumbers" classname="lipid.ElutionOrderTest" time="1.341">
     <system-out><![CDATA[score1BasedOnRTCarbonNumbers
-2025-05-15 15:12:56,980 [main] INFO  Creating RuleUnit
-2025-05-15 15:12:57,853 [main] INFO  Insert data
-2025-05-15 15:12:57,869 [main] INFO  Run query. Rules are also fired
+2025-05-15 20:11:56,550 [main] INFO  Creating RuleUnit
+2025-05-15 20:11:57,545 [main] INFO  Insert data
+2025-05-15 20:11:57,556 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 1
 Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 1
@@ -75,11 +75,11 @@ Annotation 2: 1.0
 Annotation 3: 1.0
 ]]></system-out>
   </testcase>
-  <testcase name="negativeScoreBasedOnRTNumberOfCarbons" classname="lipid.ElutionOrderTest" time="0.0">
+  <testcase name="negativeScoreBasedOnRTNumberOfCarbons" classname="lipid.ElutionOrderTest" time="0.005">
     <system-out><![CDATA[negativeScoreBasedOnRTNumberOfCarbons
-2025-05-15 15:12:57,900 [main] INFO  Creating RuleUnit
-2025-05-15 15:12:57,900 [main] INFO  Insert data
-2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
+2025-05-15 20:11:57,594 [main] INFO  Creating RuleUnit
+2025-05-15 20:11:57,595 [main] INFO  Insert data
+2025-05-15 20:11:57,596 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 3
 Scored 1 for annotations: Annotation(PI 34:0, mz=839,5644, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 6
@@ -91,11 +91,11 @@ Annotation 2: 0.0
 Annotation 3: -1.0
 ]]></system-out>
   </testcase>
-  <testcase name="negativeScoreBasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.0">
+  <testcase name="negativeScoreBasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.005">
     <system-out><![CDATA[negativeScoreBasedOnRTDoubleBonds
-2025-05-15 15:12:57,914 [main] INFO  Creating RuleUnit
-2025-05-15 15:12:57,914 [main] INFO  Insert data
-2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
+2025-05-15 20:11:57,600 [main] INFO  Creating RuleUnit
+2025-05-15 20:11:57,600 [main] INFO  Insert data
+2025-05-15 20:11:57,601 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 2
 Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 54:4, mz=883,7749, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 5
@@ -107,11 +107,11 @@ Annotation 2: 0.0
 Annotation 3: -1.0
 ]]></system-out>
   </testcase>
-  <testcase name="score1BasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.0">
+  <testcase name="score1BasedOnRTDoubleBonds" classname="lipid.ElutionOrderTest" time="0.004">
     <system-out><![CDATA[score1BasedOnRTDoubleBonds
-2025-05-15 15:12:57,914 [main] INFO  Creating RuleUnit
-2025-05-15 15:12:57,914 [main] INFO  Insert data
-2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
+2025-05-15 20:11:57,604 [main] INFO  Creating RuleUnit
+2025-05-15 20:11:57,604 [main] INFO  Insert data
+2025-05-15 20:11:57,604 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 2
 Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 54:4, mz=883,7749, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 2
@@ -123,11 +123,11 @@ Annotation 2: 1.0
 Annotation 3: 1.0
 ]]></system-out>
   </testcase>
-  <testcase name="negativeScoreBasedOnLipidType" classname="lipid.ElutionOrderTest" time="0.0">
+  <testcase name="negativeScoreBasedOnLipidType" classname="lipid.ElutionOrderTest" time="0.005">
     <system-out><![CDATA[negativeScoreBasedOnLipidType
-2025-05-15 15:12:57,914 [main] INFO  Creating RuleUnit
-2025-05-15 15:12:57,914 [main] INFO  Insert data
-2025-05-15 15:12:57,914 [main] INFO  Run query. Rules are also fired
+2025-05-15 20:11:57,609 [main] INFO  Creating RuleUnit
+2025-05-15 20:11:57,609 [main] INFO  Insert data
+2025-05-15 20:11:57,610 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 1
 Scored 1 for annotations: Annotation(TG 54:3, mz=885,7906, RT=10,00, adduct=null, intensity=10000000,0, score=1) and Annotation(TG 52:3, mz=857,7593, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 4
@@ -139,11 +139,11 @@ Annotation 2: 0.0
 Annotation 3: -1.0
 ]]></system-out>
   </testcase>
-  <testcase name="score1BasedOnLipidType" classname="lipid.ElutionOrderTest" time="0.0">
+  <testcase name="score1BasedOnLipidType" classname="lipid.ElutionOrderTest" time="0.006">
     <system-out><![CDATA[score1BasedOnLipidType
-2025-05-15 15:12:57,930 [main] INFO  Creating RuleUnit
-2025-05-15 15:12:57,930 [main] INFO  Insert data
-2025-05-15 15:12:57,930 [main] INFO  Run query. Rules are also fired
+2025-05-15 20:11:57,614 [main] INFO  Creating RuleUnit
+2025-05-15 20:11:57,614 [main] INFO  Insert data
+2025-05-15 20:11:57,615 [main] INFO  Run query. Rules are also fired
 estoy usando la rule 3
 Scored 1 for annotations: Annotation(PC 34:0, mz=913,8220, RT=11,00, adduct=null, intensity=1000000,0, score=1) and Annotation(PG 34:0, mz=751,5484, RT=9,00, adduct=null, intensity=100000000,0, score=1)
 estoy usando la rule 3
