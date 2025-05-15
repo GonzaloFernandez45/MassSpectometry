@@ -1,4 +1,5 @@
 package lipid;
+
 import org.drools.ruleunits.api.RuleUnitInstance;
 import org.drools.ruleunits.api.RuleUnitProvider;
 import org.junit.Before;
@@ -6,12 +7,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-import java.util.Set;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 public class ElutionOrderTest {
 
@@ -33,6 +29,7 @@ public class ElutionOrderTest {
      */
     @Test
     public void score1BasedOnRTCarbonNumbers() {
+        System.out.println("score1BasedOnRTCarbonNumbers");
         // Assume lipids already annotated
         LOG.info("Creating RuleUnit");
         LipidScoreUnit lipidScoreUnit = new LipidScoreUnit();
@@ -64,7 +61,8 @@ public class ElutionOrderTest {
             assertEquals(1.0, annotation2.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation3.getNormalizedScore(), 0.01);
 
-        } finally {
+        }
+        finally {
             instance.close();
         }
 
@@ -76,6 +74,7 @@ public class ElutionOrderTest {
      */
     @Test
     public void score1BasedOnRTDoubleBonds() {
+        System.out.println("score1BasedOnRTDoubleBonds");
         // Assume lipids already annotated
         LOG.info("Creating RuleUnit");
         LipidScoreUnit lipidScoreUnit = new LipidScoreUnit();
@@ -107,7 +106,8 @@ public class ElutionOrderTest {
             assertEquals(1.0, annotation2.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation3.getNormalizedScore(), 0.01);
 
-        } finally {
+        }
+        finally {
             instance.close();
         }
     }
@@ -120,6 +120,7 @@ public class ElutionOrderTest {
      */
     @Test
     public void score1BasedOnLipidType() {
+        System.out.println("score1BasedOnLipidType");
         // Assume lipids already annotated
         LOG.info("Creating RuleUnit");
         LipidScoreUnit lipidScoreUnit = new LipidScoreUnit();
@@ -151,13 +152,13 @@ public class ElutionOrderTest {
             assertEquals(1.0, annotation2.getNormalizedScore(), 0.01);
             assertEquals(1.0, annotation3.getNormalizedScore(), 0.01);
 
-        } finally {
+        }
+        finally {
             instance.close();
         }
     }
 
     // !! TODO. PART II OF THE PRACTICE. The negative evidence.
-
     /**
      * !!TODO Test to check the elution order of the lipids. The elution order is based on the number of double bonds if the lipid type and the number of
      * carbons is the same. The higher the number of double bonds, the shorter the RT.
@@ -166,6 +167,7 @@ public class ElutionOrderTest {
      */
     @Test
     public void negativeScoreBasedOnRTNumberOfCarbons() {
+        System.out.println("negativeScoreBasedOnRTNumberOfCarbons");
         // Assume lipids already annotated
         LOG.info("Creating RuleUnit");
         LipidScoreUnit lipidScoreUnit = new LipidScoreUnit();
@@ -197,7 +199,8 @@ public class ElutionOrderTest {
             assertEquals(0d, annotation2.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
             assertEquals(-1.0, annotation3.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
 
-        } finally {
+        }
+        finally {
             instance.close();
         }
     }
@@ -209,6 +212,7 @@ public class ElutionOrderTest {
      */
     @Test
     public void negativeScoreBasedOnRTDoubleBonds() {
+        System.out.println("negativeScoreBasedOnRTDoubleBonds");
         // Assume lipids already annotated
         LOG.info("Creating RuleUnit");
         LipidScoreUnit lipidScoreUnit = new LipidScoreUnit();
@@ -240,7 +244,8 @@ public class ElutionOrderTest {
             assertEquals(0d, annotation2.getNormalizedScore(), 0.01); // !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
             assertEquals(-1.0, annotation3.getNormalizedScore(), 0.01); // !! !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
 
-        } finally {
+        }
+        finally {
             instance.close();
         }
     }
@@ -251,6 +256,7 @@ public class ElutionOrderTest {
      */
     @Test
     public void negativeScoreBasedOnLipidType() {
+        System.out.println("negativeScoreBasedOnLipidType");
         // Assume lipids already annotated
         LOG.info("Creating RuleUnit");
         LipidScoreUnit lipidScoreUnit = new LipidScoreUnit();
@@ -284,9 +290,12 @@ public class ElutionOrderTest {
             assertEquals(-1.0, annotation3.getNormalizedScore(), 0.01); // !! !! TODO the scores should be between -1 and 1. It is done, but check it out for yourself
 
 
-        } finally {
+        }
+        finally {
             instance.close();
         }
 
     }
+
+
 }
