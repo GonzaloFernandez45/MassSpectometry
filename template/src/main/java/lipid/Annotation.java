@@ -1,3 +1,5 @@
+//ALGORITHM DONE BY GONZALO FERNANDEZ AND FERNANDO DE MEDINA
+
 package lipid;
 
 import adduct.Adduct;
@@ -9,6 +11,8 @@ import java.util.*;
  * Class to represent the annotation over a lipid
  */
 public class Annotation {
+
+
 
     private final Lipid lipid;
     private final double mz;
@@ -133,6 +137,8 @@ public class Annotation {
 
 
     // !!TODO Detect the adduct with an algorithm or with drools, up to the user.
+
+    //ALGORITHM DONE BY GONZALO FERNANDEZ AND FERNANDO DE MEDINA
     public String detectAdductFromSignals(IonizationMode ionizationMode, double mzTolerance) {
         // Define la tolerancia en ppm para considerar dos masas como equivalentes
 
@@ -221,92 +227,8 @@ public class Annotation {
         return "Unkown";
     }
 
-//    public String detectAdductFromGroupedSignals() {
-//        double mzTolerance = 0.2;
-//        if (groupedSignals == null || groupedSignals.size() < 2) {
-//            System.out.println("detectAdduct: Not enough signals (" +
-//                    (groupedSignals == null ? 0 : groupedSignals.size()) + ")");
-//            return null;
-//        }
-//
-//        Map<String, Double> adductMap = (getIonizationMode() == IonizationMode.POSITIVE)
-//                ? AdductList.MAPMZPOSITIVEADDUCTS
-//                : AdductList.MAPMZNEGATIVEADDUCTS;
-//
-//        double observedMz = this.getMz();
-//        System.out.println("detectAdduct: observedMz = " + observedMz + ", mode = " + getIonizationMode());
-//
-//        // Para cada aducto candidato que podría explicar observedMz:
-//        for (String candidateAdduct : adductMap.keySet()) {
-//            System.out.println("  Probando candidateAdduct: " + candidateAdduct);
-//            try {
-//                // Masa monoisotópica según el aducto candidato para observedMz
-//                double monoisotopicMass = Adduct.getMonoisotopicMassFromMZ(observedMz, candidateAdduct);
-//                System.out.println("    monoisotopicMass = " + monoisotopicMass);
-//
-//                // Buscamos que alguno de los otros peaks se corresponda con esa misma masa
-//                for (Peak otherPeak : groupedSignals) {
-//                    System.out.println("    Comparando con otherPeak: " + otherPeak);
-//                    if (Math.abs(otherPeak.getMz() - observedMz) <= mzTolerance) {
-//                        // Es el mismo pico objetivo, lo saltamos
-//                        System.out.println("      Skip: same as observedMz");
-//                        continue;
-//                    }
-//                    // Probamos todos los aductos posibles para ese otherPeak
-//                    for (String secondAdduct : adductMap.keySet()) {
-//                        double expectedMz = Adduct.getMZFromMonoisotopicMass(monoisotopicMass, secondAdduct);
-//                        double diff = Math.abs(expectedMz - otherPeak.getMz());
-//                        System.out.println("      secondAdduct=" + secondAdduct + ", expectedMz=" + expectedMz + ", observed=" + otherPeak.getMz() + ", diff=" + diff);
-//                        if (diff <= mzTolerance) {
-//                            System.out.println("    DETECTED adduct: " + candidateAdduct + " (via " + secondAdduct + ")");
-//                            return candidateAdduct;
-//                        }
-//                    }
-//                }
-//
-//            } catch (IllegalArgumentException e) {
-//                // Si el aducto no se puede parsear, simplemente lo ignoramos
-//                System.out.println("    Ignorado candidateAdduct (parse error): " + candidateAdduct);
-//            }
-//        }
-//
-//        System.out.println("detectAdduct: Ningún aducto reconocido");
-//        return null;
-//    }
-//
-//
 
 
-//    public static void main(String[] args) {
-//        Peak mH = new Peak(700.500, 80000.0); // [M+H]+
-//        Peak mNa = new Peak(722.482, 100000.0);  // [M+Na]+
-//        Lipid lipid = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
-//
-//        double annotationMZ = 722.482d;
-//        double annotationIntensity = 100000.0;
-//        double annotationRT = 6.5d;
-//        Annotation annotation = new Annotation(lipid, annotationMZ, annotationIntensity, annotationRT, IonizationMode.POSITIVE, Set.of(mH, mNa));
-//        System.out.println(annotation);
-//
-//        System.out.println("_");
-//
-//        Peak singlyCharged = new Peak(700.500, 100000.0);  // [M+H]+
-//        Peak doublyCharged = new Peak(350.754, 85000.0);   // [M+2H]2+
-//
-//        Lipid lipid1 = new Lipid(3, "TG 54:3", "C57H104O6", "TG", 54, 3);
-//        Annotation annotation1 = new Annotation(lipid1, singlyCharged.getMz(), singlyCharged.getIntensity(), 10d, IonizationMode.POSITIVE, Set.of(singlyCharged, doublyCharged));
-//        System.out.println(annotation1);
-//
-//        System.out.println("_");
-//
-//        Peak mH2 = new Peak(700.500, 100000.0); // [M+H]+
-//        Peak mk2 = new Peak(738.4564, 80000.0);  // [M+k]+
-//        Lipid lipid2 = new Lipid(1, "PC 34:1", "C42H82NO8P", "PC", 34, 1);
-//
-//        double annotationRT2 = 6.5d;
-//        Annotation annotation2 = new Annotation(lipid, mk2.getMz(), mk2.getIntensity(), annotationRT2, IonizationMode.POSITIVE, Set.of(mH, mk2));
-//        System.out.println(annotation2);
-//    }
 
 }
 

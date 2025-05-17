@@ -11,7 +11,7 @@ import adduct.AdductList;
 
 // This is one example of rules that only prints the factorial combination of all pairs eliminating the A-A combination.
 
-//rule 1
+
 rule "RT positive - same type, same double bonds, more carbons"
 when
     $a1 : /annotations [$type1 : lipid.getLipidType(), $carbons1 : lipid.getCarbonCount(), $db1 : lipid.getDoubleBondsCount(), $rt1 : rtMin]
@@ -24,7 +24,7 @@ then
 
 end
 
-//rule 2
+
 rule "RT positive - same type, less double bonds, same carbons"
 when
     $a1 : /annotations [$type1 : lipid.getLipidType(), $carbons1 : lipid.getCarbonCount(), $db1 : lipid.getDoubleBondsCount(), $rt1 : rtMin]
@@ -37,7 +37,7 @@ then
 
 end
 
-//rule 3
+
 rule "RT positive - different type, same double bonds, same carbons, RT follows PG < PE < PI < PA < PS < PC"
 when
     $a1 : /annotations [$carbons1 : lipid.getCarbonCount(), $db1 : lipid.getDoubleBondsCount(), $rt1 : rtMin, $l1 : lipid]
